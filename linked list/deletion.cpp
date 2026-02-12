@@ -31,5 +31,23 @@ int main(){
         cout<<"Roll No.: "<<first->roll<<" Name: "<<first->name<<" CGPA: "<<first->cgpa<<"\n";
         first=first->link;
     }
+    cout<<"Searchin the item in the linked list: "<<endl;
+    float item=8.5;
+    int count=0;
+    first=head;
+    while(first!=NULL){
+        if(first->cgpa==item){
+            cout<<first->name<<" ";
+            count++;
+        }
+        first=first->link;
+    }
+    if(count==0){
+        cout<<"\nNo students found"<<endl;
+    }else{
+         cout<<"Total students with CGPA "<<item<< ": "<<count<<endl;
+    }
+    Node* temp1=NULL;
+    
     return 0;
 }
